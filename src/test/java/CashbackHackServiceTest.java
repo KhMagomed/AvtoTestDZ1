@@ -1,15 +1,15 @@
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
 import ru.netology.service.CashbackHackService;
 
 public class CashbackHackServiceTest {
     @Test
-    public void shouldCountboundary(){
+    public void shouldCountboundary() {
         CashbackHackService service = new CashbackHackService();
 
-        int actual = service.remain(1_200);
-        int expected = 800;
-        Assert.assertEquals(actual,expected);
+        int actual = service.remain(1_000);
+        int expected = 0;
+        Assert.assertEquals(expected, actual);
 
     }
 
